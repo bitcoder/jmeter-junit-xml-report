@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="20" name="jmeter" skipped="0" tests="20">
+    <testcase classname="jmeter" name="My_HTTP_Raw_Request" time="0.092">
+        <failure message="Not Found">Test failed: code expected to contain /200/</failure>
+    </testcase>
+    <testcase classname="jmeter" name="My_HTTP_Request" time="0.180">
+        <failure message="OK">The operation lasted too long: It took 180 milliseconds, but should not have lasted longer than 140 milliseconds.</failure>
+    </testcase>
+    <testcase classname="jmeter" name="My_HTTP_Raw_Request" time="0.080">
+        <failure message="Not Found">Test failed: code expected to contain /200/</failure>
+    </testcase>
+    <testcase classname="jmeter" name="My_HTTP_Request" time="0.164">
+        <failure message="OK">The operation lasted too long: It took 164 milliseconds, but should not have lasted longer than 140 milliseconds.</failure>
+    </testcase>
+    <testcase classname="jmeter" name="My_HTTP_Raw_Request" time="0.065">
+        <failure message="Not Found">Test failed: code expected to contain /200/</failure>
+    </testcase>
+    <testcase classname="jmeter" name="My_HTTP_Request" time="0.152">
+        <failure message="OK">The operation lasted too long: It took 152 milliseconds, but should not have lasted longer than 140 milliseconds.</failure>
+    </testcase>
+    <testcase classname="jmeter" name="My_HTTP_Raw_Request" time="0.072">
+        <failure message="Not Found">Test failed: code expected to contain /200/</failure>
+    </testcase>
+    <testcase classname="jmeter" name="My_HTTP_Request" time="0.162">
+        <failure message="OK">The operation lasted too long: It took 162 milliseconds, but should not have lasted longer than 140 milliseconds.</failure>
+    </testcase>
+    <testcase classname="jmeter" name="My_HTTP_Raw_Request" time="0.072">
+        <failure message="Not Found">Test failed: code expected to contain /200/</failure>
+    </testcase>
+    <testcase classname="jmeter" name="My_HTTP_Request" time="0.158">
+        <failure message="OK">The operation lasted too long: It took 158 milliseconds, but should not have lasted longer than 140 milliseconds.</failure>
+    </testcase>
+    <testcase classname="jmeter" name="My_HTTP_Raw_Request" time="0.064">
+        <failure message="Not Found">Test failed: code expected to contain /200/</failure>
+    </testcase>
+    <testcase classname="jmeter" name="My_HTTP_Request" time="0.152">
+        <failure message="OK">The operation lasted too long: It took 152 milliseconds, but should not have lasted longer than 140 milliseconds.</failure>
+    </testcase>
+    <testcase classname="jmeter" name="My_HTTP_Raw_Request" time="0.102">
+        <failure message="Not Found">Test failed: code expected to contain /200/</failure>
+    </testcase>
+    <testcase classname="jmeter" name="My_HTTP_Request" time="0.150">
+        <failure message="OK">The operation lasted too long: It took 150 milliseconds, but should not have lasted longer than 140 milliseconds.</failure>
+    </testcase>
+    <testcase classname="jmeter" name="My_HTTP_Raw_Request" time="0.080">
+        <failure message="Not Found">Test failed: code expected to contain /200/</failure>
+    </testcase>
+    <testcase classname="jmeter" name="My_HTTP_Request" time="0.171">
+        <failure message="OK">The operation lasted too long: It took 171 milliseconds, but should not have lasted longer than 140 milliseconds.</failure>
+    </testcase>
+    <testcase classname="jmeter" name="My_HTTP_Raw_Request" time="0.126">
+        <failure message="Not Found">Test failed: code expected to contain /200/</failure>
+    </testcase>
+    <testcase classname="jmeter" name="My_HTTP_Request" time="0.153">
+        <failure message="OK">The operation lasted too long: It took 153 milliseconds, but should not have lasted longer than 140 milliseconds.</failure>
+    </testcase>
+    <testcase classname="jmeter" name="My_HTTP_Raw_Request" time="0.071">
+        <failure message="Not Found">Test failed: code expected to contain /200/</failure>
+    </testcase>
+    <testcase classname="jmeter" name="My_HTTP_Request" time="0.161">
+        <failure message="OK">The operation lasted too long: It took 161 milliseconds, but should not have lasted longer than 140 milliseconds.</failure>
+    </testcase>
+</testsuite>

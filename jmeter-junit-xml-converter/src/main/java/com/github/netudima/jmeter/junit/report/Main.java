@@ -11,11 +11,20 @@ public class Main {
         String jtlFileToRead = args[0];
         String jUnitReportFileToWrite = args[1];
         String testSuiteName = (args.length >= 3) ? args[2] : null;
+        String className = (args.length >= 4) ? args[3] : null;
         JtlToJUnitReportTransformer transformer = new JtlToJUnitReportTransformer();
         if (testSuiteName != null) {
             transformer.transform(jtlFileToRead, jUnitReportFileToWrite, testSuiteName);
         } else {
             transformer.transform(jtlFileToRead, jUnitReportFileToWrite);
         }
+
+        AlternateJtlToJUnitReportTransformer alternateTransformer = new AlternateJtlToJUnitReportTransformer();
+        if (testSuiteName != null) {
+            alternateTransformer.transform(jtlFileToRead, "alternate_" + jUnitReportFileToWrite, testSuiteName);
+        } else {
+            alternateTransformer.transform(jtlFileToRead, "alternate_" + jUnitReportFileToWrite);
+        }
+
     }
 }

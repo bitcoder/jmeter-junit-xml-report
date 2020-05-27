@@ -18,7 +18,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class DomXmlJUnitReportWriter implements Closeable {
+public class AlternateDomXmlJUnitReportWriter implements Closeable {
     private static final DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
 
     private final String fileName;
@@ -33,10 +33,10 @@ public class DomXmlJUnitReportWriter implements Closeable {
     private int errors;
     private int skipped;
 
-    public DomXmlJUnitReportWriter(File file, String testSuiteName) {
+    public AlternateDomXmlJUnitReportWriter(File file, String testSuiteName) {
         this(file.getAbsolutePath(), testSuiteName);
     }
-    public DomXmlJUnitReportWriter(String fileName, String testSuiteName) {
+    public AlternateDomXmlJUnitReportWriter(String fileName, String testSuiteName) {
         this.fileName = fileName;
         this.testSuiteName = testSuiteName;
         this.className = testSuiteName;
@@ -47,13 +47,19 @@ public class DomXmlJUnitReportWriter implements Closeable {
             throw new IllegalStateException("fail to init XML writer", e);
         }
         doc = documentBuilder.newDocument();
-        rootElement = doc.createElement("testsuite");
-        rootElement.setAttribute("name", testSuiteName);
+    
+        rootElement = doc.createElement("testsuites");
         doc.appendChild(rootElement);
     }
 
+    public Element createSuite(String suiteName) {
+        Element suite = doc.createElement("testsuite");
+        suite.setAttribute("name", suiteName);
+        rootElement.appendChild(suite);
+        return suite;
+    }
 
-    public void write(JtlRecord jtlRecord) {
+    public void write(Element suite, JtlRecord jtlRecord) {
         testsCount++;
 
         Element testCase = doc.createElement("testcase");
@@ -79,7 +85,7 @@ public class DomXmlJUnitReportWriter implements Closeable {
             }
             testCase.appendChild(failureDetails);
         }
-        rootElement.appendChild(testCase);
+        suite.appendChild(testCase);
     }
 
 

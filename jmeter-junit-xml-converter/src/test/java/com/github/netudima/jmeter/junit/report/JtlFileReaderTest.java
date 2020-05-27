@@ -19,7 +19,8 @@ public class JtlFileReaderTest {
                 "Failed response assert",
                 false,
                 "Internal Server Error",
-                "Value expected to be 'SUCCESS', but found 'FAILED'"
+                "Value expected to be 'SUCCESS', but found 'FAILED'",
+                1
         ));
     }
 }

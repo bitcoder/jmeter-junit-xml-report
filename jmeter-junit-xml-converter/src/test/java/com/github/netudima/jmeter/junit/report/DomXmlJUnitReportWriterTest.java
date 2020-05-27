@@ -24,19 +24,19 @@ public class DomXmlJUnitReportWriterTest {
             surefireWriter.write(new JtlRecord(
                             "Success sample",
                             true,
-                            "Response Message", null
+                            "Response Message", null, 1
                     )
             );
             surefireWriter.write(new JtlRecord(
                             "Assertion failure",
                             false,
-                            "OK", "Value expected to be 'SUCCESS', but found 'FAILED'"
+                            "OK", "Value expected to be 'SUCCESS', but found 'FAILED'", 1
                     )
             );
             surefireWriter.write(new JtlRecord(
                             "Sample error",
                             false,
-                            "Non HTTP response message", null
+                            "Non HTTP response message", null, 1
                     )
             );
 }

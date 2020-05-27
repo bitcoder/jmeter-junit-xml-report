@@ -5,12 +5,14 @@ public class JtlRecord {
     private final boolean success;
     private final String responseMessage;
     private final String failureMessage;
+    private final long elapsed;
 
-    public JtlRecord(String label, boolean success, String responseMessage, String failureMessage) {
+    public JtlRecord(String label, boolean success, String responseMessage, String failureMessage, long elapsed) {
         this.label = label;
         this.success = success;
         this.responseMessage = responseMessage;
         this.failureMessage = failureMessage;
+        this.elapsed = elapsed;
     }
 
     public String getLabel() {
@@ -27,6 +29,10 @@ public class JtlRecord {
 
     public String getResponseMessage() {
         return responseMessage;
+    }
+
+    public long getElapsed() {
+        return elapsed;
     }
 
     @Override
